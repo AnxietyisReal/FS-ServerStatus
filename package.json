@@ -1,0 +1,15 @@
+{
+  "name": "fs-serverstatus",
+  "author": "Quarters",
+  "description": "Fetch Farming Simulator Dedicated Server status for you and output it into your Discord channel.",
+  "main": "bot.cjs",
+  "dependencies": {
+    "discord.js": "13.6.0",
+    "dotenv": "16.0.0",
+    "fs": "0.0.1-security",
+    "jquery": "3.6.0",
+    "moment": "2.29.3",
+    "moment-duration-format": "^2.3.2",
+    "node-fetch": "2.6.7"
+  }
+}
