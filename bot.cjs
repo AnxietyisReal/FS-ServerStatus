@@ -51,6 +51,12 @@ client.on('messageCreate', async message => {
     if (command == 'ping') {
         client.commands.get('ping').execute(message)
     }
+    if (command == 'serverinfo') {
+        client.commands.get('serverinfo').execute(message)
+    }
+    if (command == 'prem-info') {
+        client.commands.get('prem-info').execute(message)
+    }
     /*if (command == 'server') {
         client.commands.get('server').execute(message)
     } */
