@@ -51,18 +51,18 @@ client.on('messageCreate', async message => {
     if (command == 'ping') {
         client.commands.get('ping').execute(message)
     }
-    if (command == 'server') {
+    /*if (command == 'server') {
         client.commands.get('server').execute(message)
-    }
+    } */
     if (command == 'info') {
         client.commands.get('info').execute(message)
     }
     if (command == 'time') {
         client.commands.get('time').execute(message)
     }
-    if (command == 'uptime') {
+    /*if (command == 'uptime') {
         client.commands.get('uptime').execute(message)
-    }
+    }*/
 })
  
 

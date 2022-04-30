@@ -9,7 +9,7 @@ module.exports = {
         const embed = new MessageEmbed()
         .setTitle('ServerStatus')
         .addFields(
-            {name: 'Uptime:', value:  duration }
+            {name: 'Uptime:', value: duration }
         )
         .setTimestamp()
         .setColor('BLURPLE')
@@ -18,4 +18,4 @@ module.exports = {
     }
 }
 
-const duration = moment.duration(Client.uptime).format(" D [days], H [hrs], m [mins], s [secs]");
+const duration = moment.duration(Client.uptime).format("w [weeks], d [days], h [hrs], m [min], s [secs]");

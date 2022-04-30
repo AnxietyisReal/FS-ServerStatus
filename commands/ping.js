@@ -7,7 +7,7 @@ module.exports = {
         .setTitle('Discord API Response')
         .addFields(
             {name: 'API', value: Math.round(message.client.ws.ping) + ' ms'},
-            {name: 'Bot', value: `${Date.now() - message.createdTimestamp} ms`}
+            {name: 'Bot', value: `${message.createdTimestamp - Date.now()} ms`}
         )
         .setTimestamp()
         .setColor('BLURPLE')

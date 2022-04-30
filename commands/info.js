@@ -5,7 +5,7 @@ module.exports = {
     execute(message) {
         const embed = new MessageEmbed()
         .setTitle('ServerStatus - Library versions')
-        .setDescription('I run on CommonJavaScript.')
+        .setDescription('I\'m built on top of JavaScript.')
         .addFields(
             {name: 'Node.JS', value: '18.0.0', inline: true},
             {name: 'Discord.JS', value: '13.6.0', inline: true},
