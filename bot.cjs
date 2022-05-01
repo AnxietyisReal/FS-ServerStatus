@@ -35,9 +35,16 @@ client.on('ready', async () => {
 
 client.on('messageCreate', (message) => {
     if (message.author.bot) return false;
-    if (message.content.includes("@here") || message.content.includes("@everyone") || message.type == "REPLY") return false;
     if (message.mentions.has(client.user.id)) {
         message.channel.send("https://tenor.com/view/reply-ping-gif-22087362");
+    }
+})
+
+client.on('messageCreate', (message) => {
+    if (message.content.includes('down') ||
+    message.content.includes('offline') ||
+    message.content.includes('<:ss_avatar:970233580691271681>')) {
+        message.channel.send("*Uh-oh!* It must be the time to ping the MP Management to solve that!");
     }
 })
 
@@ -45,8 +52,8 @@ client.on('messageCreate', async message => {
     const args = message.content.slice(prefix.length).split(/ +/);
     const command = args.shift().toLowerCase()
 
-    if (command == 'help') {
-        client.commands.get('help').execute(message)
+    if (command == 'cmds') {
+        client.commands.get('cmds').execute(message)
     }
     if (command == 'ping') {
         client.commands.get('ping').execute(message)
@@ -57,9 +64,12 @@ client.on('messageCreate', async message => {
     if (command == 'prem-info') {
         client.commands.get('prem-info').execute(message)
     }
-    /*if (command == 'server') {
+    if (command == 'server') {
         client.commands.get('server').execute(message)
-    } */
+    }
+    if (command == 'players') {
+        client.commands.get('players').execute(message)
+    }
     if (command == 'info') {
         client.commands.get('info').execute(message)
     }
@@ -71,31 +81,3 @@ client.on('messageCreate', async message => {
     }*/
 })
  
-
-//          General notes to keep.
-/*
-List of available statuses for the bot:
-            online
-            idle
-            dnd
-            invisible
-*/
-/*
-List of available activities for the bot:
-            PLAYING
-            WATCHING
-            STREAMING
-            LISTENING
-*/
-/*
-WebSocketManager Status
-            READY: 0
-            CONNECTING: 1
-            RECONNECTING: 2
-            IDLE: 3
-            NEARLY: 4
-            DISCONNECTED: 5
-            WAITING_FOR_GUILDS: 6
-            IDENTIFYING: 7
-            RESUMING: 8
-*/

@@ -1,4 +1,6 @@
 .env
 node_modules
 jquerylib
+notes.cjs
 /commands/cmd_template
+/commands/players.js

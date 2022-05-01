@@ -1,13 +1,13 @@
 const { MessageEmbed } = require('discord.js')
 module.exports = {
-    name: 'help',
+    name: 'cmds',
     description: 'Displays available commands.',
     execute(message) {
         const embed1 = new MessageEmbed()
         .setTitle('Available commands')
         .setDescription('Total commands: **6**')
         .addFields(
-            {name: 'help', value: 'You are reading this.'},
+            {name: 'cmds', value: 'You\'re already reading this embed.'},
             {name: 'info', value: 'Displays library versions.'},
             {name: 'ping', value: 'Discord API Response time.'},
         //  {name: 'server', value: 'Displays FS22 server info.'}, -Disabled for time-being.

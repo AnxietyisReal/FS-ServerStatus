@@ -4,6 +4,7 @@
   "description": "Fetch Farming Simulator Dedicated Server status for you and output it into your Discord channel.",
   "main": "bot.cjs",
   "dependencies": {
+    "axios": "^0.27.2",
     "discord.js": "13.6.0",
     "dotenv": "16.0.0",
     "fs": "0.0.1-security",
