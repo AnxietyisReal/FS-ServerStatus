@@ -13,6 +13,7 @@ No. You cannot retrieve the bot's invite link from me.
    Node.JS 18 or later  
    Discord.JS 13.6  
    jQuery 3.6  
+   Axios 0.27.2  
    node-fetch 2.6.7  
    moment 2.29.3 or later  
    moment-duration-format 2.3.2 or later  
