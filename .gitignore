@@ -1,4 +1,4 @@
 .env
 node_modules
 jquerylib
-cmd_template
+/commands/cmd_template
