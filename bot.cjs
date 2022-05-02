@@ -48,6 +48,10 @@ client.on('messageCreate', (message) => {
     }
 })
 
+/* client.on('messageCreate', (message) => {
+
+}) */
+
 client.on('messageCreate', async message => {
     const args = message.content.slice(prefix.length).split(/ +/);
     const command = args.shift().toLowerCase()
@@ -80,4 +84,3 @@ client.on('messageCreate', async message => {
         client.commands.get('uptime').execute(message)
     }*/
 })
- 

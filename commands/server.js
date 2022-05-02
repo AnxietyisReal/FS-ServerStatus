@@ -28,7 +28,7 @@ module.exports = {
 const { MessageEmbed } = require('discord.js');
 const axios = require('axios').default
 
-axios({
+/* axios({
     method: 'get',
     url: 'http://185.239.211.78:9150/feed/dedicated-server-stats.xml?code=eFD2dPCZ',
     timeout: 15000,
@@ -39,17 +39,17 @@ axios({
     data: {
         
 
-        /* _game,
+        _game,
         _version,
         _mapName,
         _mapSize,
         _dayTime,
-        _name, */
+        _name,
     }
-})
+}) */
 /* .then(function (response) {
     console.log(response);
-}) */
+})
 .catch(function (error) {
     if (error.response) {
         console.log(error.response.data);
@@ -61,7 +61,7 @@ axios({
         console.log('An error occured', error.message);
     }
     console.log(error.config);
-})
+}) */
 
 module.exports = {
     name: 'server',
