@@ -10,9 +10,9 @@ module.exports = {
         .addFields(
             {name: 'Node.JS', value: '18.0.0', inline: true},
             {name: 'Discord.JS', value: version, inline: true},
-         // {name: 'jQuery', value: '3.6.0', inline: true},
             {name: 'axios', value: axios.VERSION, inline: true},
             {name: 'moment', value: '2.29.3', inline: true},
+            {name: 'ms', value: '2.1.3', inline: true}
         )
         .setTimestamp()
         .setColor('#FC6E52')
