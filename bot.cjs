@@ -70,10 +70,10 @@ client.on('messageCreate', async message => {
     }
     /*if (command == 'server') {
         client.commands.get('server').execute(message)
-    }*/
+    }
     if (command == 'testserver') {
         client.commands.get('testserver').execute(message)
-    }
+    } */
     if (command == 'players') {
         client.commands.get('players').execute(message)
     }
