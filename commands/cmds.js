@@ -10,7 +10,8 @@ module.exports = {
             {name: 'cmds', value: 'You\'re already reading this embed.'},
             {name: 'info', value: 'Displays library versions.'},
             {name: 'ping', value: 'Discord API Response time.'},
-            {name: 'server', value: 'Displays FS22 server info.'},
+         // {name: 'server', value: 'Displays FS22 server info.'},
+            {name: 'players', value: 'Displays how many players are on MP server.'},
             {name: 'serverinfo', value: 'Displays Discord server info.'},
             {name: 'prem-info', value: 'Displays Discord server additional info'},
             {name: 'time', value: 'Provides timezone conversion.'},
@@ -23,7 +24,8 @@ module.exports = {
         .setTitle('Disabled commands')
         .setDescription('If things don\'t go too well, they end up\nbeing disabled for time being.')
         .addFields(
-            {name: 'uptime', value: 'How long have I been alive for??'}
+            {name: 'uptime', value: 'How long have I been alive for??'},
+            {name: 'server', value: 'Displays FS22 server info.'}
         )
         .setTimestamp()
         .setColor('RED')

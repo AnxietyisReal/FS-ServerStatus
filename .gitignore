@@ -7,3 +7,4 @@ notes.cjs
 # FS-Stats files, I don't feel the need to share them to repository yet.
 /commands/server.js
 /commands/players.js
+/commands/testserver.js

@@ -36,14 +36,14 @@ client.on('ready', async () => {
 client.on('messageCreate', (message) => {
     if (message.author.bot) return false;
     if (message.mentions.has(client.user.id)) {
-        message.channel.send("https://tenor.com/view/reply-ping-gif-22087362");
+        message.channel.send("Hi there! I see you have pinged me so I thought I would say hi!");
     }
 })
 
 client.on('messageCreate', (message) => {
     if (message.content.includes('down') ||
     message.content.includes('offline') ||
-    message.content.includes('<:ss_avatar:970233580691271681>')) {
+    message.content.includes('died')) {
         message.channel.send("*Uh-oh!* It must be the time to ping the MP Management to solve that!");
     }
 })
@@ -68,8 +68,11 @@ client.on('messageCreate', async message => {
     if (command == 'prem-info') {
         client.commands.get('prem-info').execute(message)
     }
-    if (command == 'server') {
+    /*if (command == 'server') {
         client.commands.get('server').execute(message)
+    }*/
+    if (command == 'testserver') {
+        client.commands.get('testserver').execute(message)
     }
     if (command == 'players') {
         client.commands.get('players').execute(message)
