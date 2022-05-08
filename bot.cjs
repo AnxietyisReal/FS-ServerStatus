@@ -80,6 +80,9 @@ client.on('messageCreate', async message => {
     if (command == 'info') {
         client.commands.get('info').execute(message)
     }
+    if (command == 'hostinfo') {
+        client.commands.get('hostinfo').execute(message)
+    }
     if (command == 'time') {
         client.commands.get('time').execute(message)
     }

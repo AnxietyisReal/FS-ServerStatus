@@ -10,8 +10,8 @@ No. You cannot retrieve the bot's invite link from me.
 # How to initialize the folder and setup the bot?
 
 1. This project requires the following:  
-   Node.JS 18 or later  
-   Discord.JS 13.6  
+   Node.JS 18 or later (Bot is built with 18.0.0, probably will work with newer versions as well.)  
+   Discord.JS 13.6    
    Axios 0.27.2  
    ms 2.1.3 or later  
    node-fetch 2.6.7  

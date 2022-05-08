@@ -8,3 +8,6 @@ notes.cjs
 /commands/server.js
 /commands/players.js
 /commands/testserver.js
+
+# Contains command to call host stats.
+/commands/hostinfo.js
