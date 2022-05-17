@@ -86,7 +86,7 @@ client.on('messageCreate', async message => {
     if (command == 'time') {
         client.commands.get('time').execute(message)
     }
-    /*if (command == 'uptime') {
+    if (command == 'uptime') {
         client.commands.get('uptime').execute(message)
-    }*/
+    }
 })

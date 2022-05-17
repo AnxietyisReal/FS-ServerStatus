@@ -15,7 +15,7 @@ module.exports = {
             {name: 'serverinfo', value: 'Displays Discord server info.'},
             {name: 'prem-info', value: 'Displays Discord server additional info'},
             {name: 'time', value: 'Provides timezone conversion.'},
-        //  {name: 'uptime', value: 'How long have I been alive for??'} -Disabled for time-being.
+            {name: 'uptime', value: 'How long have I been alive for??'}
         )
         .setTimestamp()
         .setColor('RANDOM')
@@ -24,7 +24,6 @@ module.exports = {
         .setTitle('Disabled commands')
         .setDescription('If things don\'t go too well, they end up\nbeing disabled for time being.')
         .addFields(
-            {name: 'uptime', value: 'How long have I been alive for??'},
             {name: 'server', value: 'Displays FS22 server info.'}
         )
         .setTimestamp()

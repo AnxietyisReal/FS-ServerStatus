@@ -1,6 +1,7 @@
-const { MessageEmbed, Client } = require('discord.js');
+const { MessageEmbed } = require('discord.js');
 const moment = require('moment');
 require("moment-duration-format");
+const os = require('node:os');
 
 module.exports = {
     name: 'uptime',
@@ -9,7 +10,8 @@ module.exports = {
         const embed = new MessageEmbed()
         .setTitle('ServerStatus')
         .addFields(
-            {name: 'Uptime:', value: duration }
+            { name: 'Bot:', value: moment.duration(message.client.uptime).format("w [weeks], d [days], h [hrs], m [mins], s [secs]") },
+            { name: 'System:', value: `${(os.uptime() / 3600).toFixed(2)}` + 'h' }
         )
         .setTimestamp()
         .setColor('BLURPLE')
@@ -17,5 +19,3 @@ module.exports = {
         message.reply({embeds: [embed], allowedMentions: {repliedUser: false}})
     }
 }
-
-const duration = moment.duration(Client.uptime).format("w [weeks], d [days], h [hrs], m [min], s [secs]");
