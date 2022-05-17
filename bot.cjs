@@ -9,7 +9,7 @@ client.commands = new Discord.Collection();
 dotenv.config();
 console.log(process.env.STARTUP);
 client.login(process.env.BOT_TOKEN);
-const prefix = '-'
+const prefix = '!'
 
 client.on('error', (err) => {
     console.log(`Failed to log into Discord API: ${err.code} ($[err.message])`);
@@ -40,13 +40,13 @@ client.on('messageCreate', (message) => {
     }
 })
 
-client.on('messageCreate', (message) => {
+/*client.on('messageCreate', (message) => {
     if (message.content.includes('down') ||
     message.content.includes('offline') ||
     message.content.includes('died')) {
         message.channel.send("*Uh-oh!* It must be the time to ping the MP Management to solve that!");
     }
-})
+})*/
 
 /* client.on('messageCreate', (message) => {
 
@@ -76,6 +76,12 @@ client.on('messageCreate', async message => {
     } */
     if (command == 'players') {
         client.commands.get('players').execute(message)
+    }
+    if (command == 'silo') {
+        client.commands.get('silo').execute(message)
+    }
+    if (command == 'savesettings') {
+        client.commands.get('savesettings').execute(message)
     }
     if (command == 'info') {
         client.commands.get('info').execute(message)
