@@ -8,8 +8,8 @@ client.commands = new Discord.Collection();
 
 dotenv.config();
 console.log(process.env.STARTUP);
-client.login(process.env.BOT_TOKEN);
-const prefix = '!'
+client.login(process.env.BOT_TOKEN); // Production bot: BOT_TOKEN -- Development bot: BOT_TOKEN_DEV
+const prefix = '-'
 
 client.on('error', (err) => {
     console.log(`Failed to log into Discord API: ${err.code} ($[err.message])`);
@@ -40,21 +40,10 @@ client.on('messageCreate', (message) => {
     }
 })
 
-/*client.on('messageCreate', (message) => {
-    if (message.content.includes('down') ||
-    message.content.includes('offline') ||
-    message.content.includes('died')) {
-        message.channel.send("*Uh-oh!* It must be the time to ping the MP Management to solve that!");
-    }
-})*/
-
-/* client.on('messageCreate', (message) => {
-
-}) */
-
 client.on('messageCreate', async message => {
-    const args = message.content.slice(prefix.length).split(/ +/);
-    const command = args.shift().toLowerCase()
+    if(message.content.startsWith(prefix)) {
+        const args = message.content.slice(prefix.length).trim().split(/ +/g)
+        const command = args.shift().toLowerCase()
 
     if (command == 'cmds') {
         client.commands.get('cmds').execute(message)
@@ -68,20 +57,11 @@ client.on('messageCreate', async message => {
     if (command == 'prem-info') {
         client.commands.get('prem-info').execute(message)
     }
-    /*if (command == 'server') {
+    if (command == 'server') {
         client.commands.get('server').execute(message)
     }
-    if (command == 'testserver') {
-        client.commands.get('testserver').execute(message)
-    } */
     if (command == 'players') {
         client.commands.get('players').execute(message)
-    }
-    if (command == 'silo') {
-        client.commands.get('silo').execute(message)
-    }
-    if (command == 'savesettings') {
-        client.commands.get('savesettings').execute(message)
     }
     if (command == 'info') {
         client.commands.get('info').execute(message)
@@ -94,5 +74,6 @@ client.on('messageCreate', async message => {
     }
     if (command == 'uptime') {
         client.commands.get('uptime').execute(message)
+    }
     }
 })
