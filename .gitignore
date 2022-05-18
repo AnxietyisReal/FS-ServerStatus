@@ -1,7 +1,11 @@
 .env
-node_modules
 notes.cjs
 /commands/cmd_template
+
+# Visual Studio Code & NodeJS mess
+FS-ServerStatus.code-workspace
+node_modules
+package-lock.json
 
 # FS-Stats files, I don't feel the need to share them to repository yet.
 /commands/server.js
