@@ -4,6 +4,7 @@
 # Personal stuff.
 notes.cjs
 /commands/cmd_template
+/commands/local_files
 
 # Visual Studio Code & NodeJS mess
 FS-ServerStatus.code-workspace

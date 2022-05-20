@@ -11,7 +11,7 @@ module.exports = {
         .setTitle('ServerStatus')
         .addFields(
             { name: 'Bot:', value: moment.duration(message.client.uptime).format("w [weeks], d [days], h [hrs], m [mins], s [secs]") },
-            { name: 'System:', value: `${(os.uptime() / 3600).toFixed(2)}` + 'h' }
+            { name: 'System:', value: `${(os.uptime() / 3600).toFixed(0)}` + ' h' }
         )
         .setTimestamp()
         .setColor('BLURPLE')

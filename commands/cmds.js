@@ -15,7 +15,7 @@ module.exports = {
             {name: 'serverinfo', value: 'Displays Discord server info.'},
             {name: 'prem-info', value: 'Displays Discord server additional info'},
             {name: 'time', value: 'Provides timezone conversion.'},
-            {name: 'uptime', value: 'How long have I been alive for??'}
+            {name: 'uptime', value: 'Shows the uptime for the bot and host.'}
         )
         .setTimestamp()
         .setColor('RANDOM')
