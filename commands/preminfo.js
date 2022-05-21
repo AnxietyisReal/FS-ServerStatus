@@ -1,6 +1,6 @@
 const { MessageEmbed } = require('discord.js')
 module.exports = {
-    name: 'prem-info',
+    name: 'preminfo',
     description: 'Displays Discord server additional info',
     execute(message) {
         const embed = new MessageEmbed()

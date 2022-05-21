@@ -8,8 +8,8 @@ client.commands = new Discord.Collection();
 
 dotenv.config();
 console.log(process.env.STARTUP);
-client.login(process.env.BOT_TOKEN); // Production bot: BOT_TOKEN -- Development bot: BOT_TOKEN_DEV
-const prefix = '-'
+client.login(process.env.BOT_TOKEN_DEV); // Production bot: BOT_TOKEN -- Development bot: BOT_TOKEN_DEV
+const prefix = '!'
 
 client.on('error', (err) => {
     console.log(`Failed to log into Discord API: ${err.code} ($[err.message])`);
@@ -54,11 +54,8 @@ client.on('messageCreate', async message => {
     if (command == 'serverinfo') {
         client.commands.get('serverinfo').execute(message)
     }
-    if (command == 'prem-info') {
-        client.commands.get('prem-info').execute(message)
-    }
-    if (command == 'server') {
-        client.commands.get('server').execute(message)
+    if (command == 'preminfo') {
+        client.commands.get('preminfo').execute(message)
     }
     if (command == 'players') {
         client.commands.get('players').execute(message)
@@ -74,6 +71,11 @@ client.on('messageCreate', async message => {
     }
     if (command == 'uptime') {
         client.commands.get('uptime').execute(message)
+    }
+    
+    
+    if (command == 'restart') {
+        client.commands.get('restart').execute(message) // Owner-level command -- Restarts bot instance under Process Manager 2
     }
     }
 })

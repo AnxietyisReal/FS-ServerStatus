@@ -10,12 +10,12 @@ module.exports = {
             {name: 'cmds', value: 'You\'re already reading this embed.'},
             {name: 'info', value: 'Displays library versions.'},
             {name: 'ping', value: 'Discord API Response time.'},
-            {name: 'server', value: 'Displays FS22 server info.'},
             {name: 'players', value: 'Displays how many players are on MP server.'},
             {name: 'serverinfo', value: 'Displays Discord server info.'},
-            {name: 'prem-info', value: 'Displays Discord server additional info'},
+            {name: 'preminfo', value: 'Displays Discord server additional info'},
             {name: 'time', value: 'Provides timezone conversion.'},
-            {name: 'uptime', value: 'Shows the uptime for the bot and host.'}
+            {name: 'uptime', value: 'Shows the uptime for the bot and host.'},
+            {name: 'restart', value: 'Tells PM2 to restart the bot. *-Bot owner only*'}
         )
         .setTimestamp()
         .setColor('RANDOM')

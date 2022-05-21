@@ -5,6 +5,7 @@
 notes.cjs
 /commands/cmd_template
 /commands/local_files
+/commands/restart.js
 
 # Visual Studio Code & NodeJS mess
 FS-ServerStatus.code-workspace
