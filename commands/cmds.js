@@ -5,7 +5,7 @@ module.exports = {
     execute(message) {
         const embed1 = new MessageEmbed()
         .setTitle('Available commands')
-        .setDescription('Global commands: **14**' + '\n' + 'Command list: **9**')
+        .setDescription('Global commands: **15**' + '\n' + 'Command list: **9**')
         .addFields(
             {name: 'cmds', value: 'You\'re already reading this embed.'},
             {name: 'fscmds', value: 'Displays FS Server commands.'},
