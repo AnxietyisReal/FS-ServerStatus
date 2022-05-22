@@ -15,6 +15,7 @@ package-lock.json
 # Farming Simulator Dedicated Server specifc commands - If you want source code for any of these, let me know :)
 /commands/server.js
 /commands/players.js
-
+/commands/vehicles.js
+/commands/fuel.js
 # Contains code to call host information.
 /commands/hostinfo.js

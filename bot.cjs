@@ -8,8 +8,8 @@ client.commands = new Discord.Collection();
 
 dotenv.config();
 console.log(process.env.STARTUP);
-client.login(process.env.BOT_TOKEN); // Production bot: BOT_TOKEN -- Development bot: BOT_TOKEN_DEV
-const prefix = '-'
+client.login(process.env.BOT_TOKEN_DEV); // Production bot: BOT_TOKEN -- Development bot: BOT_TOKEN_DEV
+const prefix = '!'
 
 client.on('error', (err) => {
     console.log(`Failed to log into Discord API: ${err.code} ($[err.message])`);
@@ -48,6 +48,10 @@ client.on('messageCreate', async message => {
     if (command == 'cmds') {
         client.commands.get('cmds').execute(message)
     }
+    if (command == 'fscmds') {
+        client.commands.get('fscmds').execute(message)
+    }
+
     if (command == 'ping') {
         client.commands.get('ping').execute(message)
     }
@@ -56,9 +60,6 @@ client.on('messageCreate', async message => {
     }
     if (command == 'preminfo') {
         client.commands.get('preminfo').execute(message)
-    }
-    if (command == 'players') {
-        client.commands.get('players').execute(message)
     }
     if (command == 'info') {
         client.commands.get('info').execute(message)
@@ -72,10 +73,30 @@ client.on('messageCreate', async message => {
     if (command == 'uptime') {
         client.commands.get('uptime').execute(message)
     }
+
+    // Farming Simulator Dedicated Server specific commands.
+    if (command == 'players') {
+        client.commands.get('players').execute(message)
+    }
+    if (command == 'fill') {
+        client.commands.get('fill').execute(message)
+    }
+    if (command == 'fuel') {
+        client.commands.get('fuel').execute(message)
+    }
+    if (command == 'server') {
+        client.commands.get('server').execute(message)
+    }
+    if (command == 'mods') {
+        client.commands.get('mods').execute(message)
+    }
+    if (command == 'fields') {
+        client.commands.get('fields').execute(message)
+    }
     
-    
+    // Owner-level command(s)
     if (command == 'restart') {
-        client.commands.get('restart').execute(message) // Owner-level command -- Restarts bot instance under Process Manager 2
+        client.commands.get('restart').execute(message) // Restarts bot instance under Process Manager 2
     }
     }
 })
