@@ -8,8 +8,9 @@ module.exports = {
         .setTitle('Time')
         .setURL('https://time.is/')
         .addFields(
-            {name: 'Sydney, Australia', value: moment().utcOffset(+10).format("dddd, MMM Do YY, hh:mm:ss A")},
-            {name: 'London, United Kingdom', value: moment().utcOffset(+1).format("dddd, MMM Do YY, hh:mm:ss A")}
+            {name: 'Sydney, NSW, Australia', value: moment().utcOffset(+10).format("dddd, MMM Do YY, hh:mm:ss A")},
+            {name: 'London, United Kingdom', value: moment().utcOffset(+1).format("dddd, MMM Do YY, hh:mm:ss A")},
+            {name: 'Dallas, Texas, United States', value: moment().utcOffset(-5).format("dddd, MMM Do YY, hh:mm:ss A")}
         )
         .setColor('#A1DFF3')
 

@@ -73,6 +73,9 @@ client.on('messageCreate', async message => {
     if (command == 'uptime') {
         client.commands.get('uptime').execute(message)
     }
+    /*if (command == '') {
+        client.commands.get('').execute(message)
+    }*/
 
     // Farming Simulator Dedicated Server specific commands.
     if (command == 'players') {

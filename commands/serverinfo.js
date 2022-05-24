@@ -8,14 +8,12 @@ module.exports = {
         const embed = new MessageEmbed()
         .setTitle(message.guild.name)
         .addFields(
-         // { name: '*Server Owner:*', value: `${message.guild.fetchOwner()}`},
-            { name: '*Server Owner ID:*', value: `${message.guild.ownerId}`},
+            { name: '*Owner:*', value: `${message.guild.ownerName}`},
+            { name: '*Owner ID:*', value: `${message.guild.ownerId}`},
             { name: '*Server ID:*', value: `${message.guild.id}`},
-            { name: '*Created on:*', value:  `${moment(message.guild.createdTimestamp).format(
-                'LT'
-            )} ${moment(message.guild.createdTimestamp).format(
+            { name: '*Created on:*', value:  ` ${moment(message.guild.createdTimestamp).format(
                 'LL'
-            )} ${moment(message.guild.createdTimestamp
+            )} **|** ${moment(message.guild.createdTimestamp
             ).fromNow()}`},
             { name: '*Total Members:*', value: `${message.guild.memberCount}`}
         )

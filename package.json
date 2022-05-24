@@ -1,7 +1,7 @@
 {
   "name": "fs-serverstatus",
   "author": "Quarters",
-  "description": "Fetch Farming Simulator Dedicated Server status for you and output it into your Discord channel.",
+  "description": "FSMP and Utility bot to cover Discord server's needs that other bots don't have.",
   "main": "bot.cjs",
   "dependencies": {
     "axios": "0.27.2",
