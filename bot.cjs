@@ -8,8 +8,8 @@ client.commands = new Discord.Collection();
 
 dotenv.config();
 console.log(process.env.STARTUP);
-client.login(process.env.BOT_TOKEN); // Production bot: BOT_TOKEN -- Development bot: BOT_TOKEN_DEV
-const prefix = '-'
+client.login(process.env.BOT_TOKEN_DEV); // Production bot: BOT_TOKEN -- Development bot: BOT_TOKEN_DEV
+const prefix = '!'
 
 client.on('error', (err) => {
     console.log(`Failed to log into Discord API: ${err.code} ($[err.message])`);
@@ -30,7 +30,7 @@ client.on('ready', async () => {
 
     console.log('Startup complete!');
     client.user.setStatus('online');
-    client.user.setActivity('Farming Simulator 22', { type: 'PLAYING' });
+    client.user.setActivity('Sync Simulator 22', { type: 'PLAYING' });
 })
 
 client.on('messageCreate', (message) => {
@@ -84,9 +84,9 @@ client.on('messageCreate', async message => {
     if (command == 'fuel') {
         client.commands.get('fuel').execute(message)
     }
-    if (command == 'server') {
+    /*if (command == 'server') {
         client.commands.get('server').execute(message)
-    }
+    }*/
     if (command == 'mods') {
         client.commands.get('mods').execute(message)
     }
