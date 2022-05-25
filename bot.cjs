@@ -5,11 +5,12 @@ const dotenv = require('dotenv');
 const client = new Client({ 
     intents: [Intents.FLAGS.GUILD_PRESENCES, Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES]});
 client.commands = new Discord.Collection();
+const players = require('./commands/players')
 
 dotenv.config();
 console.log(process.env.STARTUP);
 client.login(process.env.BOT_TOKEN); // Production bot: BOT_TOKEN -- Development bot: BOT_TOKEN_DEV
-const prefix = '!'
+const prefix = '-' // Customizable prefix
 
 client.on('error', (err) => {
     console.log(`Failed to log into Discord API: ${err.code} ($[err.message])`);
@@ -30,14 +31,7 @@ client.on('ready', async () => {
 
     console.log('Startup complete!');
     client.user.setStatus('online');
-    client.user.setActivity('Sync Simulator 22', { type: 'PLAYING' });
-})
-
-client.on('messageCreate', (message) => {
-    if (message.author.bot) return false;
-    if (message.mentions.has(client.user.id)) {
-        message.reply("Hello there! <:ss_goldenwumpusdeer:978832282804686878>");
-    }
+    client.user.setActivity(`on FSMP: ` + players, { type: 'PLAYING' });
 })
 
 client.on('messageCreate', async message => {
@@ -48,58 +42,24 @@ client.on('messageCreate', async message => {
     if (command == 'cmds') {
         client.commands.get('cmds').execute(message)
     }
-    if (command == 'fscmds') {
-        client.commands.get('fscmds').execute(message)
-    }
 
-    if (command == 'ping') {
-        client.commands.get('ping').execute(message)
-    }
-    if (command == 'serverinfo') {
-        client.commands.get('serverinfo').execute(message)
-    }
-    if (command == 'preminfo') {
-        client.commands.get('preminfo').execute(message)
-    }
-    if (command == 'info') {
-        client.commands.get('info').execute(message)
-    }
-    if (command == 'hostinfo') {
-        client.commands.get('hostinfo').execute(message)
-    }
     if (command == 'time') {
         client.commands.get('time').execute(message)
     }
-    if (command == 'uptime') {
-        client.commands.get('uptime').execute(message)
-    }
-    /*if (command == '') {
-        client.commands.get('').execute(message)
-    }*/
 
-    // Farming Simulator Dedicated Server specific commands.
     if (command == 'players') {
         client.commands.get('players').execute(message)
-    }
-    if (command == 'fill') {
-        client.commands.get('fill').execute(message)
-    }
-    if (command == 'fuel') {
-        client.commands.get('fuel').execute(message)
-    }
-    /*if (command == 'server') {
-        client.commands.get('server').execute(message)
-    }*/
-    if (command == 'mods') {
-        client.commands.get('mods').execute(message)
-    }
-    if (command == 'fields') {
-        client.commands.get('fields').execute(message)
     }
     
     // Owner-level command(s)
     if (command == 'restart') {
-        client.commands.get('restart').execute(message) // Restarts bot instance under Process Manager 2
+        client.commands.get('restart').execute(message)
+        /**
+         * Restarts bot instance under Process Manager 2
+         * If used when bot is ran under Node.JS instance,
+         * it will kill the bot instance and will stay offline
+         * until you start the bot again.
+         */
     }
     }
 })

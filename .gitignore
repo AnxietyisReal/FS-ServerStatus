@@ -2,21 +2,9 @@
 .env
 
 # Personal stuff.
-notes.cjs
 /commands/cmd_template
-/commands/restart.js
 
 # Visual Studio Code & NodeJS mess
-FS-ServerStatus.code-workspace
+FS-ServerStatus-Stripped.code-workspace
 node_modules
 package-lock.json
-
-# Farming Simulator Dedicated Server specifc commands - If you want source code for any of these, let me know :)
-/commands/server.js
-/commands/players.js
-/commands/fuel.js
-/commands/fill.js
-/commands/fields.js
-
-# Contains code to call host information.
-/commands/hostinfo.js
