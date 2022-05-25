@@ -36,7 +36,7 @@ client.on('ready', async () => {
 client.on('messageCreate', (message) => {
     if (message.author.bot) return false;
     if (message.mentions.has(client.user.id)) {
-        message.channel.send("Hi there! I see you have pinged me so I thought I would say hi!");
+        message.reply("Hello there! <:ss_goldenwumpusdeer:978832282804686878>");
     }
 })
 
