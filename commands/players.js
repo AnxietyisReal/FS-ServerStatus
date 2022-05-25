@@ -35,9 +35,6 @@ module.exports = {
          { name: `**(`+ res.data.slots.used + `/` + res.data.slots.capacity +`)**`, value: `\u200b`, inline: true },
         )
 
-        const players = res.data.slots.used + '/' + res.data.slots.capacity
-        console.log(players)
-
         if (res.data.slots.capacity === 0) {
             message.channel.send('I believe the server is offline, so I can\'t show the embed right now. :sweat_smile:')
             // Customizable error message.

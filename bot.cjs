@@ -5,7 +5,6 @@ const dotenv = require('dotenv');
 const client = new Client({ 
     intents: [Intents.FLAGS.GUILD_PRESENCES, Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES]});
 client.commands = new Discord.Collection();
-const players = require('./commands/players')
 
 dotenv.config();
 console.log(process.env.STARTUP);
@@ -31,7 +30,7 @@ client.on('ready', async () => {
 
     console.log('Startup complete!');
     client.user.setStatus('online');
-    client.user.setActivity(`on FSMP: ` + players, { type: 'PLAYING' });
+    client.user.setActivity('Farming Simulator 22', { type: 'PLAYING' });
 })
 
 client.on('messageCreate', async message => {
