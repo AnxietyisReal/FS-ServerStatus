@@ -9,7 +9,7 @@ client.commands = new Discord.Collection();
 dotenv.config();
 console.log(process.env.STARTUP);
 client.login(process.env.BOT_TOKEN); // Production bot: BOT_TOKEN -- Development bot: BOT_TOKEN_DEV
-const prefix = '-'
+const prefix = '!'
 
 client.on('error', (err) => {
     console.log(`Failed to log into Discord API: ${err.code} ($[err.message])`);
